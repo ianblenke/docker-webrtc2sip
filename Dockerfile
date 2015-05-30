@@ -14,7 +14,8 @@ RUN curl https://gist.githubusercontent.com/ianblenke/eaaa5a11578ab89f40a4/raw/e
     apt-key add -
 
 RUN apt-get update -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y webrtc2sip
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y webrtc2sip libyuv
+
+VOLUME /etc/webrtc
 
 CMD webrtc2sip
-
